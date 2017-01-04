@@ -1,10 +1,27 @@
 .tree-view {
 	font-size: @font-size;
-	background: @tree-view-background-color;
-
-	.selected:before {
-		background: #d0d0d0;
-	}
+	background: @app-background-color;
+  position: relative;
+  overflow-x: visible;
+  li:not(.list-nested-item),
+  li.list-nested-item > .list-item {
+    font-weight: normal;
+    color: darken(@background-color-selected, 20%);
+  }
+  li.list-nested-item > .list-item{
+    color: darken(@text-color, 20%);
+  }
+  li.selected,
+  li.list-nested-item.selected > .list-item {
+    color: @text-color!important;
+    font-weight: bold!important;
+    z-index: 10;
+    &:before {
+      background-color: white;
+      border-right: 2px solid white;
+      right: -2px;
+    }
+  }
 }
 
 .tree-view-resizer {
@@ -15,15 +32,5 @@
 
 .focusable-panel {
 	opacity: 1;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#e8ecf1), to(#ebebeb));
-	background-image: -webkit-linear-gradient(top, #e8ecf1, #ebebeb);
 
-	&:focus {
-		background-image: -webkit-gradient(linear, left top, left bottom, from(#e8ecf1),to(#d1d8e0));
-		background-image: -webkit-linear-gradient(top, #e8ecf1, #d1d8e0);
-
-		.selected:before {
-			background: @background-color-selected;
-		}
-	}
 }

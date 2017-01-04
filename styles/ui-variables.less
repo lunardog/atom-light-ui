@@ -2,12 +2,12 @@
 
 @text-color: #444;
 @text-color-subtle: #999;
-@text-color-highlight: #000;
+@text-color-highlight: #fff;
 @text-color-selected: #fff;
 
 @text-color-info: #5293d8;
 @text-color-success: #45A815;
-@text-color-warning: #CD8E00;
+@text-color-warning: #F1A55E;
 @text-color-error: #c00;
 
 @text-color-ignored: @text-color-subtle;
@@ -23,10 +23,10 @@
 @background-color-highlight: rgba(0, 0, 0, .1);
 @background-color-selected: #6aa5e9;
 
-@app-background-color: #ccc;
+@app-background-color: #F8F8F8;
 
-@base-background-color: #f4f4f4;
-@base-border-color: #9f9f9f;
+@base-background-color: #F8F8F8;
+@base-border-color: #DDDDDD;
 
 @pane-item-background-color: @base-background-color;
 @pane-item-border-color: @base-border-color;
@@ -51,13 +51,13 @@
 @button-background-color-selected: #888;
 @button-border-color: rgba(0, 0, 0, 0.15);
 
-@tab-bar-background-color: #d8d8d8;
-@tab-bar-border-color: #ddd;
-@tab-background-color: #e8e8e8;
-@tab-background-color-active: #f0f0f0;
-@tab-border-color: lighten(@base-border-color, 10%);
+@tab-bar-background-color: @app-background-color;
+@tab-bar-border-color: transparent;
+@tab-background-color: @app-background-color;
+@tab-background-color-active: #5186BE;
+@tab-border-color: @base-border-color;
 
-@tree-view-background-color: #eee;
+@tree-view-background-color: @app-background-color;
 @tree-view-border-color: @base-border-color;
 
 @scrollbar-background-color: #F9F9F9; // Needs to be opaque -> atom/atom/issues/4578
@@ -80,9 +80,9 @@
 @component-icon-padding: 5px;
 @component-icon-size: 16px;
 @component-line-height: 25px;
-@component-border-radius: 2px;
+@component-border-radius: 0px;
 
-@tab-height: 26px;
+@tab-height: 30px;
 
 
 // Other
